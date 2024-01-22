@@ -20,15 +20,15 @@ To download diagnostic WSIs (formatted as .svs files), please refer to the [NIH 
 ### Processing Whole Slide Images
 To process WSIs, first, the tissue regions in each biopsy slide are segmented using Otsu's Segmentation on a downsampled WSI using OpenSlide. The 256 x 256 patches without spatial overlapping are extracted from the segmented tissue regions at the desired magnification. Consequently, a pretrained truncated ResNet50 is used to encode raw image patches into 1024-dim feature vectors, which we then save as .pt files for each WSI. We achieve the pre-processing of WSIs by using <a href="https://github.com/mahmoodlab/CLAM" target="blank"><b>CLAM</b></a>
 
-### TCGA-PathoText: Slide-Text pairs
+### TCGA-PathoText: Slide-Text captions
 
 Our dataset can be downloaded online now. The following folder structure is assumed for the TCGA-PathoText:
 ```bash
 DATA_ROOT_DIR/
     └──TCGA_BLCA/
         ├── case_1
-              ├──annotation <b>(slide-level captions we collected)</b>
-              ├──case_1.svs <b>(link to the corresponding TCGA slide)</b>
+              ├──annotation ##(slide-level captions we collected)
+              ├──case_1.pdf ##(softlink to the corresponding raw TCGA report)
               └── ...
         ├── case_2
         └── ...
@@ -50,3 +50,4 @@ DATA_ROOT_DIR/
         └── ...
     ...
 ```
+DATA_ROOT_DIR is the base directory of all datasets / cancer type(e.g. the directory to your SSD).
