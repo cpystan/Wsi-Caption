@@ -27,7 +27,7 @@ We notice that TCGA includes scanning copies of pathology reports in the format 
 
 Our dataset can be downloaded online now. The following folder structure is assumed for the TCGA-PathoText:
 ```bash
-DATA_ROOT_DIR/
+TCGA-PathoText/
     └──TCGA_BLCA/
         ├── case_1
               ├──annotation ##(slide-level captions we obtained by ocr and GPT)
@@ -39,18 +39,17 @@ DATA_ROOT_DIR/
         ├── case_1
         ├── case_2
         └── ...
-    └──TCGA_ACC/
-        ├── case_1
-        ├── case_2
+    ...
+
+TCGA-Slide-Features/
+    └──TCGA_BLCA/
+        ├── case_1.pt
+        ├── case_2.pt
         └── ...
-    └──TCGA_LUAD/
-        ├── case_1
-        ├── case_2
-        └── ...
-    └──TCGA_UCEC/
-        ├── case_1
-        ├── case_2
+    └──TCGA_BRCA/
+        ├── case_1.pt
+        ├── case_2.pt
         └── ...
     ...
 ```
-DATA_ROOT_DIR is the base directory of all datasets / cancer type(e.g. the directory to your SSD).
+TCGA-PathoText contains the captions and TCGA-Slide-Features includes the extracted features of WSIs.
