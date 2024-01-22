@@ -23,12 +23,12 @@ def parse_agrs():
     parser = argparse.ArgumentParser()
 
     # Data input settings
-    parser.add_argument('--image_dir', type=str, default='/yanglin/BRCA-Resnet50-imagenet/BRCA-Resnet50-imagenet/pt_files', help='the path to the directory containing the encoded wsi patches.')
-    parser.add_argument('--ann_path', type=str, default='../ocr/datasets/TCGA_BRCA', help='the path to the directory containing the data.')
-    parser.add_argument('--split_path', type=str, default='../ocr/dataset_csv/tcga_brca/splits_0.csv', help='the path to the directory containing the train/val/test splits.')
+    parser.add_argument('--image_dir', type=str, default='.../pt_files', help='the path to the directory containing the encoded wsi patches.')
+    parser.add_argument('--ann_path', type=str, default='.../TCGA_BRCA', help='the path to the directory containing the data.')
+    parser.add_argument('--split_path', type=str, default='../ocr/dataset_csv/splits_0.csv', help='the path to the directory containing the train/val/test splits.')
     
     # Data loader settings
-    parser.add_argument('--dataset_name', type=str, default='BRCA', choices=['BRCA',], help='the dataset to be used.')
+    parser.add_argument('--dataset_name', type=str, default='TCGA', choices=['TCGA',], help='the dataset to be used.')
     parser.add_argument('--max_fea_length', type=int, default=10000, help='the maximum sequence length of the patch embeddings.')
     parser.add_argument('--max_seq_length', type=int, default=600, help='the maximum sequence length of the reports.')
     parser.add_argument('--threshold', type=int, default=3, help='the cut off frequency for the words.')
@@ -86,13 +86,12 @@ def parse_agrs():
     parser.add_argument('--gamma', type=float, default=0.1, help='the gamma of the learning rate scheduler.')
     
     # debug
-    parser.add_argument("--checkpoint_dir", type=str, default='/chenpingyi/projects/WSI-GPT/WsiCaption/results/BRCA-ours-resent')
+    parser.add_argument("--checkpoint_dir", type=str, default='')
     parser.add_argument("--mode", type=str, default='Test')
     parser.add_argument("--debug", type=str, default='False')
     parser.add_argument("--local_rank", type=int, default=-1)
     
-    # Baselines (encoder-decoder)
-    parser.add_argument("--caption_model", type=str, default='False')
+
 
     # Others
     parser.add_argument('--seed', type=int, default=9233, help='.')

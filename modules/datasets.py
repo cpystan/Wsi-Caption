@@ -55,7 +55,7 @@ class BaseDataset(Dataset):
 
 
 
-class BrcaImageDataset(BaseDataset):
+class TcgaImageDataset(BaseDataset):
     def __getitem__(self, idx):
         example = self.examples[idx]
         image_id = example['id']
