@@ -23,8 +23,8 @@ To process WSIs, first, the tissue regions in each biopsy slide are segmented us
 ### TCGA-PathoText: Slide-Text captions
 We notice that TCGA includes scanning copies of pathology reports in the format of PDF1. But they are too long with redundant information and present in a complex structure. Therefore, we propose a pipeline to extract and clean pathological texts from TCGA, which can convert complex PDF files to concise WSI-text pairs with the assistance of large language models (LLM).
 
-<img src="pics/dpt.png"width = "60%" height = "60%" />
-
+<img src="pics/dpt.png" width = "60%" height = "60%" alt="dataset construction" align=center />
+ 
 Our dataset can be downloaded online now. The following folder structure is assumed for the TCGA-PathoText:
 ```bash
 TCGA-PathoText/
