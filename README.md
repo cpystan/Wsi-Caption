@@ -58,7 +58,7 @@ TCGA-PathoText contains the captions and TCGA-Slide-Features includes the extrac
 Experiments can be run using the following generic command-line:
 ### Training model
 ```shell
-CUDA_VISIBLE_DEVICES=<DEVICE ID> python main.py --mode 'Train' --image_dir <SLIDE FEATURE PATH> --ann_path <CAPTION PATH> --split_path <PATH to the directory containing the train/val/test splits> 
+python main.py --mode 'Train' --n_gpu <GPUs to be used, e.g '0,1,2,3' for 4 cards training> --image_dir <SLIDE FEATURE PATH> --ann_path <CAPTION PATH> --split_path <PATH to the directory containing the train/val/test splits> 
 ```
 ### Testing model
 ```shell
