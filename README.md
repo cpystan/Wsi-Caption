@@ -22,12 +22,14 @@ To process WSIs, first, the tissue regions in each biopsy slide are segmented us
 
 ### TCGA-PathoText: Slide-Text captions
 
+<img src="pics/DPT.png" width="1500px" align="center" />
+
 Our dataset can be downloaded online now. The following folder structure is assumed for the TCGA-PathoText:
 ```bash
 DATA_ROOT_DIR/
     └──TCGA_BLCA/
         ├── case_1
-              ├──annotation ##(slide-level captions we collected)
+              ├──annotation ##(slide-level captions we obtained by ocr and GPT)
               ├──case_1.pdf ##(softlink to the corresponding raw TCGA report)
               └── ...
         ├── case_2
