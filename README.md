@@ -22,7 +22,7 @@ To process WSIs, first, the tissue regions in each biopsy slide are segmented us
 
 ### TCGA-PathoText: Slide-Text captions
 
-<img src="pics/dpt.png" width="1500px" align="center" />
+<img src="pics/dpt.png" width="1000px" align="center" />
 
 Our dataset can be downloaded online now. The following folder structure is assumed for the TCGA-PathoText:
 ```bash
