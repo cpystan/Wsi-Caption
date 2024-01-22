@@ -18,4 +18,35 @@ We will share our collected slide-level captions but WSIs still need to be downl
 To download diagnostic WSIs (formatted as .svs files), please refer to the [NIH Genomic Data Commons Data Portal](https://portal.gdc.cancer.gov/). WSIs for each cancer type can be downloaded using the [GDC Data Transfer Tool](https://docs.gdc.cancer.gov/Data_Transfer_Tool/Users_Guide/Data_Download_and_Upload/).
 
 ### Processing Whole Slide Images
-To process WSIs, first, the tissue regions in each biopsy slide are segmented using Otsu's Segmentation on a downsampled WSI using OpenSlide. The 256 x 256 patches without spatial overlapping are extracted from the segmented tissue regions at the desired magnification. Consequently, a pretrained truncated ResNet50 is used to encode raw image patches into 1024-dim feature vectors, which we then save as .pt files for each WSI. We achieve the pre-processing of WSIs by using <a href="https://arxiv.org/abs/2311.16480" target="blank"><b>CLAM</b></a>
+To process WSIs, first, the tissue regions in each biopsy slide are segmented using Otsu's Segmentation on a downsampled WSI using OpenSlide. The 256 x 256 patches without spatial overlapping are extracted from the segmented tissue regions at the desired magnification. Consequently, a pretrained truncated ResNet50 is used to encode raw image patches into 1024-dim feature vectors, which we then save as .pt files for each WSI. We achieve the pre-processing of WSIs by using <a href="https://github.com/mahmoodlab/CLAM" target="blank"><b>CLAM</b></a>
+
+### TCGA-PathoText: Slide-Text pairs
+
+Our dataset can be downloaded online now. The following folder structure is assumed for the TCGA-PathoText:
+```bash
+DATA_ROOT_DIR/
+    └──TCGA_BLCA/
+        ├── case_1
+              ├──annotation <b>(slide-level captions we collected)</b>
+              ├──case_1.svs <b>(link to the corresponding TCGA slide)</b>
+              └── ...
+        ├── case_2
+        └── ...
+    └──TCGA_BRCA/
+        ├── case_1
+        ├── case_2
+        └── ...
+    └──TCGA_GBMLGG/
+        ├── case_1
+        ├── case_2
+        └── ...
+    └──TCGA_LUAD/
+        ├── case_1
+        ├── case_2
+        └── ...
+    └──TCGA_UCEC/
+        ├── case_1
+        ├── case_2
+        └── ...
+    ...
+```
