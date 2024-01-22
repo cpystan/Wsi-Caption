@@ -53,3 +53,20 @@ TCGA-Slide-Features/
     ...
 ```
 TCGA-PathoText contains the captions and TCGA-Slide-Features includes the extracted features of WSIs.
+
+## Running Experiments
+Experiments can be run using the following generic command-line:
+### Training model
+```shell
+CUDA_VISIBLE_DEVICES=<DEVICE ID> python main.py --mode 'Train' --image_dir <SLIDE FEATURE PATH> --ann_path <CAPTION PATH> --split_path <PATH to the directory containing the train/val/test splits> 
+```
+### Testing model
+```shell
+python main.py --mode 'Test' --image_dir <SLIDE FEATURE PATH> --ann_path <CAPTION PATH> --split_path <PATH to the directory containing the train/val/test splits> --checkpoint_dir <PATH TO CKPT>
+```
+
+## Basic Environment
+* Linux (Tested on Ubuntu 18.04) 
+* NVIDIA GPU (Tested on Nvidia GeForce A100) with CUDA 12.0
+* Python (3.8)
+
