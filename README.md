@@ -1,4 +1,4 @@
-# WsiCaption: Multiple Instance Generation of Pathology Reports for Gigapixel Whole Slide Images
+# WsiCaption: Multiple Instance Generation of Pathology Reports for Gigapixel Whole Slide Images [MIICCAI2024]
 
 =====
 <details>
