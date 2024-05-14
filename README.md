@@ -54,6 +54,11 @@ TCGA-Slide-Features/
 ```
 TCGA-PathoText contains the captions and TCGA-Slide-Features includes the extracted features of WSIs.
 
+More details about the dataset are shown below. . (a) Histogram of text lengths. It shows that TCGA-PathoText includes
+longer pathology reports compared to ARCH which only describes small patches.
+(b) Word cloud showing 100 most frequent tokens.
+<img src="pics/dataset.png" width="1500px" align="center" />
+
 ## Running Experiments
 Experiments can be run using the following generic command-line:
 ### Training model
