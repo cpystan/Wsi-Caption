@@ -75,4 +75,6 @@ python main.py --mode 'Test' --image_dir <SLIDE FEATURE PATH> --ann_path <CAPTIO
 * Linux (Tested on Ubuntu 18.04) 
 * NVIDIA GPU (Tested on Nvidia GeForce A100) with CUDA 12.0
 * Python (3.8)
+* PyTorch (1.10.0+cu111)
+* torchvision (0.11.0+cu111)
 
