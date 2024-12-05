@@ -14,6 +14,7 @@
 
 ## Pre-requisites:
 We will share our collected slide-level captions but WSIs still need to be downloaded due to their large resolution.
+[2024/12] We now provide the WSI features for convenience! The ResNet50 features on TCGA-BRCA is <a href="https://pan.baidu.com/s/1pAHuxJFAo80eA4Rd8RRuuQ?pwd=1mzw " target="blank"><b>here</b></a>: 
 ### Downloading TCGA Slides
 To download diagnostic WSIs (formatted as .svs files), please refer to the [NIH Genomic Data Commons Data Portal](https://portal.gdc.cancer.gov/). WSIs for each cancer type can be downloaded using the [GDC Data Transfer Tool](https://docs.gdc.cancer.gov/Data_Transfer_Tool/Users_Guide/Data_Download_and_Upload/).
 
